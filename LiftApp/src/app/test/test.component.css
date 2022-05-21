@@ -1,0 +1,95 @@
+.container {
+ display:flex;
+ justify-content: center;
+ padding: 1em;
+ width: 100%;
+ margin-top: 30%;
+}
+
+
+.container #panel {
+  font-size: 4.5em;
+  flex-direction: row;
+  padding: 0.5em;
+  bottom: 0.5em;
+  right: 0.5em;
+}
+#panel {
+  justify-content: flex-end;
+}
+
+.container1 {
+  display:flex;
+  justify-content: center;
+  padding: 1em;
+  padding-left: 2em;
+  flex-wrap: nowrap;
+}
+
+.container2 {
+  display:flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10%;
+ }
+
+#panel h3 {
+   font-size:1.5em;
+     color:black;
+ }
+#lineSpace {
+  font-size: 4em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+ }
+.button {
+  display: flex;
+  justify-content: center;
+}
+@keyframes transitionSlow{
+  0%{opacity: 0%}
+  50%{opacity: 50%}
+  100%{opacity:100%}
+}
+span a{
+  font-size: 19px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform .25s;
+  font-family: 'Montserrat', sans-serif;
+  
+}
+span{
+  position: relative;
+  display: inline-flex;
+  width: 180px;
+  height: 55px;
+  margin: 0 15px;
+  perspective: 1000px;
+}
+span a:before,
+span a:after{
+  position: absolute;
+  content: "Learn More!";
+  height: 55px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid black;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+span a:before{
+  color: black;
+  background: coral;
+  transform: rotateY(0deg) translateZ(25px);
+}
+span a:after{
+  color: black;
+  transform: rotateX(90deg) translateZ(25px);
+}
+span a:hover{
+  transform: translateZ(-25px) rotateX(-90deg);
+}
