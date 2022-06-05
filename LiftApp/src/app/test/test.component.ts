@@ -1,6 +1,8 @@
 import { typeWithParameters } from '@angular/compiler/src/render3/util';
 import { Type } from '../type';
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, ElementRef, Inject, OnInit } from '@angular/core';
+import { elementAt } from 'rxjs';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: '.app-test',
@@ -13,7 +15,10 @@ export class TestComponent implements OnInit {
   private deleteSpeed : number;
   private arr: string;
 
-
+  Card = {
+    SwitchOn: false,
+    Opac: '100%'
+  }
 
   printIntro(){
     const par = document.getElementById('panel');
@@ -29,9 +34,18 @@ export class TestComponent implements OnInit {
       el.style.animation = "transitionSlow " + timer + "s";
       par?.appendChild(el);
       }
-
 }
 
+expandCard() {
+  if(this.Card.SwitchOn === false){
+    this.Card.SwitchOn = true;
+    this.Card.Opac = 'half';
+  }
+  else if (this.Card.SwitchOn === true) {
+    this.Card.SwitchOn = false;
+    this.Card.Opac = "full";
+  }
+}
 
   constructor(
   ) {
