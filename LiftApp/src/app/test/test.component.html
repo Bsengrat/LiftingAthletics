@@ -4,18 +4,18 @@
 </div>
 <div class ="container1">
     <div id ="panel">
-        <h3>Lift Smarter</h3>
+        <h3 [ngStyle]="{'opacity': Card.SwitchOn === true ? '50%' : '100%'}">Lift Smarter</h3>
     </div>
     <div id = "lineSpace">|</div>
     <div id ="panel">
-        <h3>Easy Tracking</h3>
+        <h3 [ngStyle]="{'opacity': Card.SwitchOn === true ? '50%' : '100%'}">Easy Tracking</h3>
     </div>
     <div id = "lineSpace">|</div>
     <div id ="panel">
-        <h3>Efficient Gains</h3>
+        <h3 [ngStyle]="{'opacity': Card.SwitchOn === true ? '50%' : '100%'}">Efficient Gains</h3>
     </div>
 </div>
 <div class = "container2">
-    <span><a href="#"></a></span>
+    <span id = "expand-Card"><a (click)='expandCard()'></a></span>
 </div>
 

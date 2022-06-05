@@ -4,5 +4,9 @@ export interface Type {
     typeSpeed: number;
     deleteSpeed: number;
     arr: string[];
+}
 
+export interface Card {
+    Opac : string;
+    SwitchOn: boolean;
 }
